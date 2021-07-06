@@ -18,12 +18,12 @@ vpath .base build
 ########################################################
 
 # your C compiler:
-CC       = gcc
-#CC       = icc
-#CC       = pgcc
+CC ?= gcc
+#CC = icc
+#CC = pgcc
 
 # your tool for creating static libraries:
-AR        = ar rv
+AR = ar rv
 
 # Your python interpreter.
 # In order to use Python 3, you can manually
@@ -38,7 +38,7 @@ OPTFLAG = -O3
 #OPTFLAG = -fast
 
 # your openmp flag (comment for compiling without openmp)
-OMPFLAG   = -fopenmp
+OMPFLAG ?= -fopenmp
 #OMPFLAG   = -mp -mp=nonuma -mp=allcores -g
 #OMPFLAG   = -openmp
 
